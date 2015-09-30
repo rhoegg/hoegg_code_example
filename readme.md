@@ -1,3 +1,5 @@
+Written using *nodejs* and *lodash*. 
+
 ##Comments:
 
 Removing wholesaler from the contacts is removing a value. The second contact has the value Sysco which could be an indication of data corruption or bad data entry. This depends on where the data came from. 

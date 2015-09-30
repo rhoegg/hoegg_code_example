@@ -1,0 +1,15 @@
+{
+  "name": "hoegg_code_example",
+  "version": "1.0.0",
+  "description": "Comments:\r Removing wholesaler from the contacts is removing data. The second contact has the value Sysco. This could be an indication of corrupts data or bad data entry. Depends on where the data came from.",
+  "main": "app.js",
+  "dependencies": {
+    "lodash": "^3.10.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

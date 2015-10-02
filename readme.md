@@ -1,16 +1,15 @@
-Written using *nodejs* and *lodash*. 
+Written using *nodejs* using mocha, chai for testing. 
+
 
 ##Comments:
 
-Removing wholesaler from the contacts is removing a value. The second contact has the value Sysco which could be an indication of data corruption or bad data entry. This depends on where the data came from. 
+* I've changed the project to create a jsonClean module. 
+* app.js executes and displays the result with the example you gave. 
+* jsonClean.spec.js is a set of test making sure it works with a number of child properties
+
 
 ###Good Software is software that works.
 
-* If this was the only issue I would manually handle it. I'd perform a little research to find out. 
-
-* If this is part of a data conversion project this might similarly occur in other data models. I would write a generic conversion that could be configured to execute this process on other models as well.
-
-* If I created the JSON format as part of the application I would hope I wouldn't create this structure in the first place. 
 
 ###Good Software is testable. 
   

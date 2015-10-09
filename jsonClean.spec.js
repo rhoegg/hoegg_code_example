@@ -83,3 +83,50 @@ describe('jsonClean remove two values from two arrays', function () {
     })
 });
 
+describe('jsonClean remove duplicate from deeply nested object', function() {
+  var input = {
+    name: "Top Name",
+    first: {
+      firstWrapper: {
+        firstInner: {
+          name: "Inner Name",
+          things: [
+            {
+              thingWrapper: {
+                name: "First Inner Thing",
+                type: "ThingOne"
+              },
+              thingWrapper: {
+                name: "Second Inner Thing",
+                type: "ThingTwo"
+              }
+            }
+          ]
+        }
+      }
+    },
+    second: {
+      name: "Second Name",
+      type: "Not Very Nested"
+    }
+  };
+
+  var result = jsonClean.removeChildDuplicateKeyInParent(input);
+
+  expect(result).to.deep.equal({
+    name: "Top Name",
+    first: {
+      firstWrapper: {
+        firstInner: {
+          things: [
+            {
+              thingWrapper: { type: "ThingOne" },
+              thingWrapper: { type: "ThingTwo" }
+            }
+          ]
+        }
+      }
+    },
+    second: { type: "Not Very Nested"}}
+  );
+});
